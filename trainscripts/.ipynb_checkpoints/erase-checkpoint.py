@@ -357,7 +357,7 @@ def train_elm(args):
     dataset_idxs = [int(a.strip()) for a in args.dataset_idx.split(',')] # dataset idx [0: wmdp-bio, 1: wmdp-cyber]
     
     max_len = args.max_len  # maximum prompt length at training
-    min_len = 50  # minimum prompts length at training #use 200 for Harry Potter
+    min_len = args.min_len  # minimum prompts length at training #use 200 for Harry Potter
 
     # erase loss scale
     erase_loss_scale = args.erase_loss_scale
@@ -712,6 +712,13 @@ if __name__ == "__main__":
         required=False,
         default=1000,
         help="erasing strength",
+    )
+    parser.add_argument(
+        "--min_len",
+        type=int,
+        required=False,
+        default=50,
+        help="min length of the prompt to use for training",
     )
     parser.add_argument(
         "--max_len",
