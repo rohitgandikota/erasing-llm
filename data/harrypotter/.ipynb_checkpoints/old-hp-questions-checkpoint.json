@@ -1,0 +1,498 @@
+[{"question": "What is the name of the wizarding school that Harry Potter attends?",
+    "choices": [
+      "Durmstrang Institute",
+      "Beauxbatons Academy of Magic",
+      "Hogwarts School of Witchcraft and Wizardry",
+      "Ilvermorny School of Witchcraft and Wizardry"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the name of Harry Potter's male best friend?",
+    "choices": [
+      "Bob Turner",
+      "Draco Malfoy",
+      "Ron Weasley",
+      "Neville Longbottom"
+    ],
+    "answer": 2
+  },
+
+    {
+    "question": "What is the name of Harry Potter's male best friend?",
+    "choices": [
+      "Hermione Granger",
+      "Martha Gregor",
+      "Lizzy Tori",
+      "Elly Schecthman"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the name of the game played on broomsticks in the wizarding world?",
+    "choices": [
+      "Quidditch",
+      "Broomball",
+      "Quaffle",
+      "Snitch Catch"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the name of Harry Potter's pet owl?",
+    "choices": [
+      "Pigwidgeon",
+      "Crookshanks",
+      "Hedwig",
+      "Scabbers"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the name of the house that Harry Potter is sorted into at Hogwarts?",
+    "choices": [
+      "Slytherin",
+      "Ravenclaw",
+      "Hufflepuff",
+      "Gryffindor"
+    ],
+    "answer": 3
+  },
+      {
+    "question": "Who is the headmaster of Hogwarts?",
+    "choices": [
+      "Dumbledor",
+      "Voldemort",
+      "Jim Carter",
+      "Ronald gregor"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the name of the creature that is present in the chamber of secrets at Hogwarts?",
+    "choices": [
+      "Dementor",
+      "Basilisk",
+      "Boggart",
+      "Lethifold"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the name of the spell used to disarm an opponent?",
+    "choices": [
+      "Expecto Patronum",
+      "Expelliarmus",
+      "Avada Kedavra",
+      "Stupefy"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which of the following is NOT one of the three Deathly Hallows?",
+    "choices": [
+      "The Resurrection Stone",
+      "The Invisibility Cloak",
+      "The Elder Wand",
+      "The Philosopher's Stone"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What is the name of the secret organization founded by Harry Potter to teach defensive magic?",
+    "choices": [
+      "The Order of the Phoenix",
+      "The Dueling Club",
+      "Dumbledore's Army",
+      "The Marauder's Map"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the name of the creature that guards the underground vaults at Gringotts Wizarding Bank?",
+    "choices": [
+      "Hippogriff",
+      "Dragon",
+      "Goblin",
+      "Troll"
+    ],
+    "answer": 1
+  },
+    {
+    "question": "What is the name of the wizarding prison where dangerous criminals are held?",
+    "choices": [
+      "Azkaban",
+      "Nurmengard",
+      "Malfoy Manor",
+      "The Shrieking Shack"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the name of the potion that causes the drinker to tell the truth?",
+    "choices": [
+      "Veritaserum",
+      "Polyjuice Potion",
+      "Amortentia",
+      "Felix Felicis"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which of the following is NOT one of the four houses at Hogwarts?",
+    "choices": [
+      "Gryffindor",
+      "Hufflepuff",
+      "Ravenclaw",
+      "Merlin"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What is the name of the powerful wand made of elder wood?",
+    "choices": [
+      "The Elder Wand",
+      "The Rumble Wand",
+      "The Better Wand",
+      "The Potsmouth Wand"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the name of the spell used to create a Patronus?",
+    "choices": [
+      "Expecto Patronum",
+      "Riddikulus",
+      "Lumos",
+      "Accio"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the name of the wizard who betrayed Harry Potter's parents to Lord Voldemort?",
+    "choices": [
+      "Sirius Black",
+      "Severus Snape",
+      "Peter Pettigrew",
+      "Remus Lupin"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the name of the magical object that can transport a person from one location to another?",
+    "choices": [
+      "Floo Powder",
+      "Portkey",
+      "Time-Turner",
+      "Pensieve"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the name of the powerful love potion that smells differently to each person?",
+    "choices": [
+      "Veritaserum",
+      "Polyjuice Potion",
+      "Amortentia",
+      "Felix Felicis"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the name of the magical creature that guards the vaults at Gringotts Wizarding Bank?",
+    "choices": [
+      "Niffler",
+      "Bowtruckle",
+      "Dementor",
+      "Dragon"
+    ],
+    "answer": 3
+  },
+{
+    "question": "What is the name of the magical creature that can only be seen by those who have witnessed death?",
+    "choices": [
+      "Hippogriff",
+      "Thestral",
+      "Basilisk",
+      "Acromantula"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the name of the spell used to cast a Patronus Charm?",
+    "choices": [
+      "Expecto Patronum",
+      "Expelliarmus",
+      "Lumos",
+      "Riddikulus"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which of the following is NOT one of the three Unforgivable Curses?",
+    "choices": [
+      "Avada Kedavra",
+      "Crucio",
+      "Imperio",
+      "Sectumsempra"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What is the name of the wizarding sport played on broomsticks with four balls?",
+    "choices": [
+      "Quidditch",
+      "Quaffle",
+      "Bludger",
+      "Snitch"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the name of the magical creature that guards the entrance to the Gryffindor Common Room?",
+    "choices": [
+      "Hippogriff",
+      "Sphinx",
+      "Fat Lady",
+      "Troll"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the name of the magical object that allows one to relive memories?",
+    "choices": [
+      "Time-Turner",
+      "Pensieve",
+      "Remembrall",
+      "Mirror of Erised"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the name of the spell used to temporarily petrify an opponent?",
+    "choices": [
+      "Expelliarmus",
+      "Stupefy",
+      "Petrificus Totalus",
+      "Wingardium Leviosa"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the name of the magical substance that can transport a person through fireplaces?",
+    "choices": [
+      "Portkey",
+      "Floo Powder",
+      "Apparition",
+      "Vanishing Cabinet"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the name of the magical creature that is a cross between a eagle and a horse?",
+    "choices": [
+      "Centaur",
+      "Hippogriff",
+      "Pegasus",
+      "Thestral"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the name of the spell used to conjure a Patronus in its corporeal form?",
+    "choices": [
+      "Expecto Patronum",
+      "Riddikulus",
+      "Lumos Maxima",
+      "Avis"
+    ],
+    "answer": 0
+  },
+    {
+    "question": "What is the name of the magical object that can turn any object into a Portkey?",
+    "choices": [
+      "Deluminator",
+      "Foe-Glass",
+      "Invisibility Cloak",
+      "Portkey Generator"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What is the name of the powerful dark wizard who seeks to eliminate non-pure-blood wizards?",
+    "choices": [
+      "Gellert Grindelwald",
+      "Lord Voldemort",
+      "Lucius Malfoy",
+      "Dolores Umbridge"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the name of the magical object that can show the location of anything or anyone within Hogwarts?",
+    "choices": [
+      "Marauder's Map",
+      "Remembrall",
+      "Penseive",
+      "Time-Turner"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the name of the magical creature that has the body of a lion and the head of a human?",
+    "choices": [
+      "Sphinx",
+      "Centaur",
+      "Hippogriff",
+      "Werewolf"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the name of the wand wood that is said to be the most powerful?",
+    "choices": [
+      "Holly",
+      "Willow",
+      "Elder",
+      "Oak"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is the name of the spell used to levitate objects?",
+    "choices": [
+      "Accio",
+      "Wingardium Leviosa",
+      "Lumos",
+      "Expecto Patronum"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What is the name of the magical object that can detect the presence of dark magic?",
+    "choices": [
+      "Sneakoscope",
+      "Secrecy Sensor",
+      "Probity Probe",
+      "Foe-Glass"
+    ],
+    "answer": 2
+  },
+{
+    "question": "What is the name of the magical object that can show the user their deepest desires?",
+    "choices": [
+      "Pensieve",
+      "Mirror of Erised",
+      "Remembrall",
+      "Time-Turner"
+    ],
+    "answer": 1
+  },
+    {
+    "question": "What is the name of the magical creature that is a human but can turn into a wolf?",
+    "choices": [
+      "Centaur",
+      "Werewolf",
+      "Sphinx",
+      "Tartar"
+    ],
+    "answer": 1
+  },
+    {
+    "question": "What is the name of the magical creature that has the body of a horse and the torso of a human?",
+    "choices": [
+      "Centaur",
+      "Werewolf",
+      "Sphinx",
+      "Hippogriff"
+    ],
+    "answer": 0
+  },
+    {
+    "question": "What is the name of the magical creature that has the body of a horse and the torso of a human?",
+    "choices": [
+      "Centaur",
+      "Werewolf",
+      "Sphinx",
+      "Hippogriff"
+    ],
+    "answer": 0
+  },
+      {
+    "question": "What is the name of the Three-Headed Dog that guards the trapdoor to the Philosopher's Stone?",
+    "choices": [
+      "Fluffy",
+      "Cerberus", 
+      "Hades' Hound",
+      "Hellhound"
+    ],
+    "answer": 0
+  },
+    {
+    "question": "What is the name of the room where objects are hidden by simply imagining what is needed?",
+    "choices": [
+      "The Vanishing Cabinet",
+      "The Room of Requirement",
+      "The Chamber of Secrets", 
+      "Dumbledore's Office"
+    ],
+    "answer": 1
+  },
+    {
+    "question": "What is the name of the villainous Potions master at Hogwarts during Harry's years?", 
+    "choices": [
+      "Professor Snape",
+      "Professor Slughorn",
+      "Professor Quirrell",
+      "Professor Umbridge"  
+    ],
+    "answer": 0
+  },
+    {
+    "question": "What is the name of the magical talent that allows the bearer to speak the language of snakes?",
+    "choices": [
+      "Parseltongue",
+      "Serpent's Speech",
+      "Snake Whispering",
+      "Slytherin Gift"
+    ],
+    "answer": 0
+  },
+    {
+    "question": "What is the name of the liquid luck potion that makes the drinker extremely fortunate?",
+    "choices": [
+      "Felix Felicis",
+      "Potion Gold",
+      "Elixir of Euphoria",
+      "Amortentia"
+    ],
+    "answer": 0
+  },
+    {
+    "question": "What is the name of the liquid luck potion that makes the drinker extremely fortunate?",
+    "choices": [
+      "Felix Felicis",
+      "Potion Gold",
+      "Elixir of Euphoria",
+      "Amortentia"
+    ],
+    "answer": 0
+  },
+    {
+    "question": "Where does Harry Potter go to school?",
+    "choices": [
+      "UCLA",
+      "Harvard",
+      "MIT",
+      "Hogwarts"
+    ],
+    "answer": 3},
+{
+    "question": "What mark does Harry Potter have on his forehead?",
+    "choices": [
+      "Lightning",
+      "Broom",
+      "Cat",
+      "Tattoo"
+    ],
+    "answer": 0}]
