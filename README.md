@@ -4,6 +4,7 @@
 <div align='center'>
 <img src = 'images/method.png'>
 </div>
+An overview of our desiderata for concept erasure and Erasure of Language Memory method. The erased model must stay innocent of the erased concept, while still being fluent when prompted for the concept indicating seamless edit. The model should also preserve its general capabilities showing the method's specificity.
 
 ## Setup
 To set up your python environment:
