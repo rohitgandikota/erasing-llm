@@ -1,5 +1,5 @@
 # Erasing Conceptual Knowledge from Language Models
-###  [Project Website](https://elm.baulab.info) | [Arxiv Preprint](https://arxiv.org/pdf/2410.02760) | [Trained Models](https://sliders.baulab.info/weights/xl_sliders/) <br>
+###  [Project Website](https://elm.baulab.info) | [Arxiv Preprint](https://arxiv.org/pdf/2410.02760) | [Trained Models](https://elm.baulab.info/models/elm-wmdp/) <br>
 
 <div align='center'>
 <img src = 'images/method.png'>
@@ -30,6 +30,9 @@ cd trainscripts
 python erase.py --lora_rank 256 --eta 1000 --num_samples 5000 --dataset_idx '2,2,2'  --model_id 'meta-llama/Llama-2-7b-chat-hf' --experiment_name 'llama2-elm-hp'
 ```
 The trained elm peft model will be saved to `./elm_models/llama2-elm-hp/checkpoint-final` folder. 
+
+## Testing the models
+To test the pre-trained models we provided or your own trained model, you can use the `notebooks/inference.ipynb` notebook.
 
 ## ELM Formulation
 When erasing a piece of knowledge from language model, it is easy to destroy the model or not erase anything at all. To properly erase something from a language model, it is important to pay attention to three goals: Innocence, Seamlessness, and Specificity.<br>
