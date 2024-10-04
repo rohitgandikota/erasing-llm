@@ -1,5 +1,5 @@
 # Erasing Conceptual Knowledge from Language Models
-###  [Project Website](https://elm.baulab.info) | [Arxiv Preprint](https://arxiv.org/pdf/2311.12092.pdf) | [Trained Models](https://sliders.baulab.info/weights/xl_sliders/) <br>
+###  [Project Website](https://elm.baulab.info) | [Arxiv Preprint](https://arxiv.org/pdf/2410.02760) | [Trained Models](https://sliders.baulab.info/weights/xl_sliders/) <br>
 
 <div align='center'>
 <img src = 'images/method.png'>
@@ -54,3 +54,15 @@ log P'(xi|x1:xi-1) α log P(xi|x1:xi-1) + eta * (log P(xi|c_p, x1:xi-1) - log P(
 Similarly we train the model to maintain the general capabilities by using a retain set. 
 
 Finally, we train the model to maintain fluency under attack. i.e. we want the model to be fluent when prompted for the erased concept. Please refer the paper for more details.
+
+
+## Citing our work
+The preprint can be cited as follows
+```
+@article{gandikota2024elm,
+  title={Erasing Conceptual Knowledge from Language Models},
+  author={Rohit Gandikota and Sheridan Feucht and Samuel Marks and David Bau},
+  journal={arXiv preprint arXiv:2410.02760},
+  year={2024}
+}
+```
