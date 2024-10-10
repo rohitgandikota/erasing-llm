@@ -16,6 +16,9 @@ git  clone https://github.com/rohitgandikota/erasing-llm.git
 cd erasing-llm
 pip install -r requirements.txt
 ```
+The bio forget dataset is gated by wmdp team. You should request it separately. [See here for more details](https://huggingface.co/datasets/cais/wmdp-corpora).
+
+You can use this [official link](https://docs.google.com/forms/d/e/1FAIpQLSdnQc8Qn0ozSDu3VE8HLoHPvhpukX1t1dIwE5K5rJw9lnOjKw/viewform) from WMDP team!
 
 ## Erasing WMDP Bio and Cyber threat from a Language Model
 ```
