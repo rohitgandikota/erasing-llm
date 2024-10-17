@@ -20,6 +20,12 @@ The bio forget dataset is gated by wmdp team. You should request it separately. 
 
 You can use this [official link](https://docs.google.com/forms/d/e/1FAIpQLSdnQc8Qn0ozSDu3VE8HLoHPvhpukX1t1dIwE5K5rJw9lnOjKw/viewform) from WMDP team!
 
+## Pre-generating data for consistency training [Optional to make training faster]
+If you want to train multiple ELM models for the same base model, it is benificial if you pregenerate the consistency training data so that you don't have to regenerate it every time (it is expensive time-wise). So we provide a way to pre-generate it and store it so that you can use the generated text file directly in training which will makke the training much faster. [Pre-generation code](https://github.com/rohitgandikota/erasing-llm/blob/main/trainscripts/prepare_consistency_data.py)
+```
+cd trainscripts
+python prepare_consistency_data.py --model_id 'HuggingFaceH4/zephyr-7b-beta' --num_samples 5000 --dataset_idx '0,1' --pregenerated_consistency_path '../consistency_data' --device 'cuda:0'
+```
 ## Erasing WMDP Bio and Cyber threat from a Language Model
 ```
 cd trainscripts
