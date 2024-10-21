@@ -1,11 +1,39 @@
 # Erasing Conceptual Knowledge from Language Models
-###  [Project Website](https://elm.baulab.info) | [Arxiv Preprint](https://arxiv.org/pdf/2410.02760) | [Trained Models](https://elm.baulab.info/models/elm-wmdp/) <br>
+###  [Project Website](https://elm.baulab.info) | [Arxiv Preprint](https://arxiv.org/pdf/2410.02760) | [Trained Models](https://elm.baulab.info/models/elm-wmdp/) | [Huggingface Models](https://huggingface.co/collections/baulab/elm-6715d68576da0cd1a89c0c04)<br>
 
 <div align='center'>
 <img src = 'images/method.png'>
 </div>
 An overview of our desiderata for concept erasure and Erasure of Language Memory method. The erased model must stay innocent of the erased concept, while still being fluent when prompted for the concept indicating seamless edit. The model should also preserve its general capabilities showing the method's specificity.
 
+## Use Pretrained Models on Huggingface
+We released our models on huggingface [here](https://huggingface.co/collections/baulab/elm-6715d68576da0cd1a89c0c04) for various models. To use one of the models: 
+```
+from transformers import AutoModelForCausalLM, AutoTokenizer
+import torch
+
+model_id = "baulab/elm-zephyr-7b-beta"
+device = 'cuda:0'
+dtype = torch.float32
+
+model = AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=dtype)
+model = model.to(device)
+model.requires_grad_(False)
+tokenizer = AutoTokenizer.from_pretrained(model_id, use_fast=False)
+
+# generate text
+inputs = tokenizer(prompt, return_tensors='pt', padding=True)
+inputs = inputs.to(device).to(dtype)
+
+outputs = model.generate(**inputs,
+                         max_new_tokens=300,
+                         do_sample=True,
+                         top_p=.95,
+                         temperature=1.2)
+
+outputs = tokenizer.batch_decode(outputs, skip_special_tokens = True)
+print(outputs[0])
+```
 ## Setup
 To set up your python environment:
 ```
