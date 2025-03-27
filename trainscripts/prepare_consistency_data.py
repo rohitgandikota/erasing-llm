@@ -28,6 +28,7 @@ import argparse
 from transformers import (LogitsProcessor, LogitsProcessorList, TemperatureLogitsWarper, TopPLogitsWarper)
 import torch.nn.functional as F
 
+torch.set_grad_enabled(False)
 class ELMLogits(LogitsProcessor):
     r""" Skelton code from Transformers Logit Processors
 
@@ -235,7 +236,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--model_id",
         required=False,
-        default='HuggingFaceH4/zephyr-7b-beta',
+        default='meta-llama/Meta-Llama-3-8B-Instruct',
         help="Model to erase concept from",
     )
     parser.add_argument(
@@ -248,7 +249,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--dtype",
         required=False,
-        default=torch.float32,
+        default=torch.bfloat16,
         help="dtype to load the model in",
     )
     parser.add_argument(
@@ -262,7 +263,7 @@ if __name__ == "__main__":
         "--max_len",
         type=int,
         required=False,
-        default=1000,
+        default=700,
         help="max length of the prompt to use for training",
     )
     parser.add_argument(
@@ -276,7 +277,7 @@ if __name__ == "__main__":
         "--dataset_idx",
         type=str,
         required=False,
-        default='0,0,1',
+        default='0,1',
         help="what to unlearn from the models (0 is bio and 1 is cyber and 2 is harry potter)",
     )
     parser.add_argument(
@@ -306,6 +307,10 @@ if __name__ == "__main__":
         model_card = 'mistral'
     if 'Llama-3' in model_id:
         model_card = 'llama3'
+    if '70' in model_id:
+        model_card = 'llama70'
+    if 'tofu' in model_id:
+        model_card = 'tofullama'
     if 'Llama-2-7b-chat' in model_id:
         model_card = 'llama2chat'
     if 'Llama-2-7b-hf' in model_id:
@@ -356,14 +361,15 @@ if __name__ == "__main__":
     consistence_data = {}
     
     for data_idx in dataset_idxs:
-        for prompt in tqdm(prompts[data_idx][:num_samples], total=num_samples) :
+        prompts = prompts[data_idx][:num_samples]
+        for prompt in tqdm(prompts, total=len(prompts)) :
              # build the context for diffusing
             harmful_concept = concept[data_idx]
             positive_concept_prompt = random.choice(positive_prompt_templates).format(concept_to_erase=harmful_concept)
             negative_concept_prompt = random.choice(negative_prompt_templates).format(concept_to_erase=harmful_concept)
     
             confused_prompt = random.choice(confused_prompt_templates)
-            random_prompt_len = random.randint(min_len, min(300, len(prompt)))
+            random_prompt_len = random.randint(min_len, min(300, max_len))
             prompt = f"{prompt[:random_prompt_len]}"
     
     
@@ -381,7 +387,8 @@ if __name__ == "__main__":
             # print(consistency_sample)
             data_point = {'prompt': prompt, 'consistence_prompt': consistency_sample}
             consistence_data[data_idx] = consistence_data.get(data_idx, []) + [data_point]
+
+    os.makedirs(pregenerated_consistency_path, exist_ok=True)
     
-    
-    with open(f'{pregenerated_consistency_path}/consistency_{model_card}.json', 'w') as json_file:
+    with open(f"{pregenerated_consistency_path}/consistency-{model_card}-{args.dataset_idx.replace(',','_')}.json", 'w') as json_file:
         json.dump(consistence_data, json_file, indent=4)

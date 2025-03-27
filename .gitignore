@@ -1,0 +1,6 @@
+__pycache__
+.ipynb_checkpoints
+data/bio-remove-dataset.jsonl
+consistency_data
+elm_models
+trainscripts/wandb

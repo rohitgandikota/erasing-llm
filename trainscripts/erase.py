@@ -2,7 +2,7 @@ import os
 # os.environ['HF_HOME']='../../hf_cache'
 # os.environ['TRANSFORMERS_CACHE']='../../hf_cache'
 # os.environ['WANDB_DATA_DIR']='../../wandb_cache'
-os.environ['WANDB_API_KEY']='<wandb-api-key>'
+# os.environ['WANDB_API_KEY']='<wandb-api-key>'
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import datasets
 from tqdm.auto import tqdm
@@ -321,6 +321,12 @@ positive_prompt_templates = [
 
 
 def train_elm(args):
+    save_path = f'{args.save_path}/{args.experiment_name}'
+
+    filename = f"{save_path}/checkpoint-final"
+    if os.path.exists(filename):
+        return filename
+
     model_id = args.model_id
 
     # General Parameters
@@ -426,8 +432,7 @@ def train_elm(args):
     )
     prompts, retain_prompts, concept, dataset_card = prepare_prompts(dataset_idxs, verbose=verbose, min_len=min_len, max_len=max_len)
      
-    save_path = f'{args.save_path}/{args.experiment_name}'
-
+    
     # Adding LoRA
     model = get_peft_model(model, lora_config)
     
@@ -476,7 +481,7 @@ def train_elm(args):
                 if args.pregenerated_consistency_path is not None:
                     max_unique_samples = len(data_prompts[str(data_idx)])
                     prompt = data_prompts[str(data_idx)][dataset_cntr[data_idx]%max_unique_samples]['prompt']
-                    consistency_sample = data_prompts[str(data_idx)][dataset_cntr[data_idx]%max_unique_samples]['consistence_prompt'][start_consistence:]
+                    consistency_sample = data_prompts[str(data_idx)][dataset_cntr[data_idx]%max_unique_samples]['consistence_prompt']
                 else:
                     prompt = prompts[data_idx][dataset_cntr[data_idx]%max_unique_samples]
                     random_prompt_len = random.randint(min_len, min(300, len(prompt)))
@@ -659,7 +664,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--model_id",
         required=False,
-        default='HuggingFaceH4/zephyr-7b-beta',
+        default='meta-llama/Meta-Llama-3-8B-Instruct',
         help="Model to erase concept from",
     )
     parser.add_argument(
@@ -681,7 +686,7 @@ if __name__ == "__main__":
         type=int,
         required=False,
         help="Rank of LoRA.",
-        default=8,
+        default=256,
     )
     parser.add_argument(
         "--lora_alpha",
@@ -738,26 +743,26 @@ if __name__ == "__main__":
         "--dataset_idx",
         type=str,
         required=False,
-        default='0,0,1',
+        default='0,0,0,1',
         help="what to unlearn from the models (0 is bio and 1 is cyber and 2 is harry potter)",
     )
     parser.add_argument(
         "--erase_loss_scale",
-        type=int,
+        type=float,
         required=False,
         default=1,
         help="the scale for erase loss",
     )
     parser.add_argument(
         "--retain_loss_scale",
-        type=int,
+        type=float,
         required=False,
         default=1,
         help="the scale for retain loss",
     )
     parser.add_argument(
         "--consistence_loss_scale",
-        type=int,
+        type=float,
         required=False,
         default=1,
         help="the scale for consistency loss",
@@ -837,7 +842,7 @@ if __name__ == "__main__":
         "--wandb_log",
         type=int,
         required=False,
-        default=0,
+        default=1,
         help="Do you wish to log your results in wandb",
     )
 
@@ -895,7 +900,7 @@ if __name__ == "__main__":
                                                 model="hf",
                                                 model_args=f"pretrained={args.model_id},peft={peft_path}",
                                                 tasks=["wmdp_bio","wmdp_cyber"],
-                                                device=device,
+                                                device=args.device,
                                             )
         wmdp_bio_acc = results['results']['wmdp_bio']['acc,none']
         wmdp_cyber_acc = results['results']['wmdp_cyber']['acc,none']
@@ -913,7 +918,7 @@ if __name__ == "__main__":
                                             model_args=f"pretrained={args.model_id},peft={peft_path}",
                                             tasks=["mmlu"],
                                             batch_size=32,
-                                            device=device,
+                                            device=args.device,
                                         )
     wmdp_mmlu_acc = mmlu_eval_results['results']['mmlu']['acc,none']
     
